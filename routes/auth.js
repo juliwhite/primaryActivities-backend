@@ -1,8 +1,19 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const fs = require('fs');
 require('dotenv').config(); // Load environment variables
+
+// const plainPassword = 'password123'; // Replace with the plain text password
+// const saltRounds = 10;
+
+// bcrypt.hash(plainPassword, saltRounds, (err, hash) => {
+//     if (err) {
+//         console.error(err);
+//     } else {
+//         console.log('Hashed password:', hash);
+//     }
+// });
 
 const router = express.Router();
 const SECRET_KEY = process.env.SECRET_KEY || 'default_secret_key';
@@ -60,5 +71,10 @@ router.post("/validate-token", (req, res) => {
         res.status(401).json({ message: "Invalid token" });
     }
 });
+
+// Default route for /api/auth
+// router.get('/', (req, res) => {
+//     res.send('Auth API is working!');
+// });
 
 module.exports = router;

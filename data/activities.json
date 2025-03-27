@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Kids Fun Day",
+      "date": "2025-04-15",
+      "description": "A fun-filled day with games, crafts, and educational activities for children aged 5-10.",
+      "location": "Community Park",
+      "organizer": "City Events Management",
+      "category": "social goals"
+    },
+    {
+      "name": "Spring Art Workshop",
+      "date": "2025-04-22",
+      "description": "An art workshop where children can explore painting and crafts.",
+      "location": "Downtown Art Center",
+      "organizer": "Local Art Foundation",
+      "category": "intellectual goal"
+    },
+    {
+      "name": "Summer Reading Camp",
+      "date": "2025-06-10",
+      "description": "A two-week reading camp encouraging children to develop a love for books.",
+      "location": "City Library",
+      "organizer": "Public Library Association",
+      "category": "spiritual goal"
+    },
+    {
+      "name": "Outdoor Adventure Day",
+      "date": "2025-07-20",
+      "description": "A day of outdoor activities including hiking, games, and a picnic.",
+      "location": "Green Valley Park",
+      "organizer": "Nature Explorers Club",
+      "category": "physical goal"
+    }
+]
+  

@@ -6,7 +6,7 @@ const authRouter = require('./routes/auth');
 const activityRouter = require('./routes/activities');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -17,11 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRouter);
 app.use('/api/activities', activityRouter);
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -31,4 +26,9 @@ app.use((err, req, res, next) => {
 // 404 Not Found middleware
 app.use((req, res) => {
   res.status(404).send('Sorry, that route does not exist.');
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
