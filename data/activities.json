@@ -30,6 +30,54 @@
       "location": "Green Valley Park",
       "organizer": "Nature Explorers Club",
       "category": "physical goal"
-    }
+    },
+    {
+        "name": "Community Service Day",
+        "date": "2025-06-25",
+        "description": "A day dedicated to giving back through volunteering and helping the local community.",
+        "location": "Various Locations",
+        "organizer": "Helping Hands Organization",
+        "category": "spiritual goal"
+    },
+    {
+        "name": "Junior Sports Challenge",
+        "date": "2025-07-28",
+        "description": "A fun sports competition including relay races, soccer, and basketball for kids.",
+        "location": "City Sports Complex",
+        "organizer": "Youth Athletics Club",
+        "category": "physical goal"
+    },
+    {
+        "name": "Cycling for Fun",
+        "date": "2025-08-10",
+        "description": "A cycling event promoting health and fitness for kids and families.",
+        "location": "Riverside Trail",
+        "organizer": "Healthy Living Initiative",
+        "category": "physical goal"
+    },
+    {
+        "name": "Chess Tournament",
+        "date": "2025-08-20",
+        "description": "A friendly chess tournament to challenge young minds and improve strategic thinking.",
+        "location": "Community Chess Club",
+        "organizer": "Chess Masters Association",
+        "category": "intellectual goal"
+    },
+    {
+        "name": "Outdoor Yoga for Kids",
+        "date": "2025-09-05",
+        "description": "A beginner-friendly yoga session in nature to promote relaxation and flexibility.",
+        "location": "Hilltop Park",
+        "organizer": "Mind & Body Wellness Group",
+        "category": "physical goal"
+    },
+    {
+      "name": "Family Picnic and Games",
+      "date": "2025-05-05",
+      "description": "An opportunity for families to bond through outdoor games and shared meals.",
+      "location": "Lakeside Park",
+      "organizer": "Community Wellness Group",
+      "category": "social goals"
+  }
 ]
   
