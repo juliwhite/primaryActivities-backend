@@ -23,15 +23,16 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
+// Default route for root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Primary Activities API!');
+});
+
 // 404 Not Found middleware
 app.use((req, res) => {
   res.status(404).send('Sorry, that route does not exist.');
 });
 
-// Default route for root URL
-app.get('/', (req, res) => {
-  res.send('Welcome to the Primary Activities API!');
-});
 
 // Start server
 app.listen(PORT, () => {
