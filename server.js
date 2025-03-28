@@ -28,6 +28,11 @@ app.use((req, res) => {
   res.status(404).send('Sorry, that route does not exist.');
 });
 
+// Default route for root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Primary Activities API!');
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
