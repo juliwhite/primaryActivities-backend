@@ -86,12 +86,12 @@ router.post('/', authenticateJWT, (req, res) => {
       const activities = JSON.parse(fs.readFileSync(activitiesFile, 'utf8'));
   
       const newActivity = {
-        name:'Test Activity',
-        date: '2025-12-01',
-        description: 'A test activity description.',
-        location: 'Test Location',
-        organizer: 'Test Organizer',
-        category: 'test category',
+        name,
+        date,
+        description,
+        location,
+        organizer,
+        category,
       };
   
       activities.push(newActivity);
