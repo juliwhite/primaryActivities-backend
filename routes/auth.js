@@ -38,6 +38,7 @@ router.post("/login", async (req, res) => {
         return res.status(500).json({ message: "Error reading user data" });
     }
 
+     // Find the user
     const user = users.find((u) => u.username === username);
     if (!user) {
         return res.status(401).json({ message: "Invalid username or password" });

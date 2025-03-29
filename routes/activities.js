@@ -72,10 +72,13 @@ router.get('/category/:category', (req, res) => {
   });
 
 // Add a new activity
-router.post('/', (req, res) => {
+router.post('/', authenticateJWT, (req, res) => {
     const { name, date, description, location, organizer, category } = req.body;
+
+    console.log('Received activity:', req.body); // Log the incoming activity
   
     if (!name || !date || !description || !location || !organizer || !category) {
+      console.log('Validation failed: Missing fields');
       return res.status(400).json({ message: 'All fields are required' });
     }
   
@@ -83,19 +86,23 @@ router.post('/', (req, res) => {
       const activities = JSON.parse(fs.readFileSync(activitiesFile, 'utf8'));
   
       const newActivity = {
-        name,
-        date,
-        description,
-        location,
-        organizer,
-        category,
+        name:'Test Activity',
+        date: '2025-12-01',
+        description: 'A test activity description.',
+        location: 'Test Location',
+        organizer: 'Test Organizer',
+        category: 'test category',
       };
   
       activities.push(newActivity);
+      console.log('Updated activities:', activities); // Log updated activities
+
       fs.writeFileSync(activitiesFile, JSON.stringify(activities, null, 2));
+      console.log('Activity saved successfully!');
   
       res.status(201).json(newActivity);
     } catch (error) {
+      console.error('Error saving activity:', error);
       res.status(500).json({ message: 'Error saving activity' });
     }
   });
